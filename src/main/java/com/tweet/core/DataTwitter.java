@@ -13,6 +13,7 @@ import twitter4j.Query;
 import twitter4j.QueryResult;
 import twitter4j.Status;
 import twitter4j.Twitter;
+import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
@@ -104,6 +105,10 @@ public class DataTwitter {
 	    	    return myTweets;
 				
 			}
+		}catch(TwitterException e){
+			System.out.println("Identifiant entered are incorrect");
+			//e.printStackTrace();
+			
 		}catch(Exception e){
 			e.printStackTrace();
 			
