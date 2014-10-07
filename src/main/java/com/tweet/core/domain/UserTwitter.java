@@ -1,4 +1,4 @@
-package com.tweet.core;
+package com.tweet.core.domain;
 
 import java.io.Serializable;
 
@@ -7,12 +7,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-
+/**
+ * 
+ * @author MMC
+ *
+ */
 @Getter
 @Setter
 @EqualsAndHashCode(of = {"userId"})
 @ToString
-public class UtilisateurTwitter implements Serializable{
+public class UserTwitter implements Serializable{
 	
 	/**
 	 * 
@@ -26,14 +30,14 @@ public class UtilisateurTwitter implements Serializable{
 	/**
 	 * 
 	 */
-	public UtilisateurTwitter() {
+	public UserTwitter() {
 		super();		
 	}
 	/**
 	 * @param userName
 	 * @param userId
 	 */
-	public UtilisateurTwitter(String userName, Long userId) {
+	public UserTwitter(String userName, Long userId) {
 		super();
 		this.userName = userName;
 		this.userId = userId;
@@ -44,7 +48,7 @@ public class UtilisateurTwitter implements Serializable{
 	 * @param nbrFollowers
 	 * @param nbrFollowing 
 	 */
-	public UtilisateurTwitter(String userName, Long userId,Long nbrFollowers,Long nbrFollowing) {
+	public UserTwitter(String userName, Long userId,Long nbrFollowers,Long nbrFollowing) {
 		super();
 		this.userName = userName;
 		this.userId = userId;

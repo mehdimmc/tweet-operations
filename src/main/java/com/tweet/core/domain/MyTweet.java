@@ -1,9 +1,10 @@
 /**
  * 
  */
-package com.tweet.core;
+package com.tweet.core.domain;
 
 import java.util.Date;
+
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -12,7 +13,7 @@ import lombok.ToString;
 import twitter4j.Status;
 
 /**
- * @author Mehdi
+ * @author MMC
  *
  */
 @Getter
@@ -31,7 +32,7 @@ public class MyTweet {
 	private int retweet;
 	private int nbRetweet;
 	private int nbFavoris;
-	private UtilisateurTwitter user;
+	private UserTwitter user;
 	/**
 	 * 
 	 */
@@ -48,7 +49,7 @@ public class MyTweet {
 	 * @param user
 	 */
 	public MyTweet(Long id, String content, String hashtage, String location,
-			Date timeTweet,int retweet, UtilisateurTwitter user) {
+			Date timeTweet,int retweet, UserTwitter user) {
 		super();
 		this.id = id;
 		this.content = content;

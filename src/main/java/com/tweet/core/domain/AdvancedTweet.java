@@ -1,8 +1,8 @@
-package com.tweet.core;
+package com.tweet.core.domain;
 
 /**
  * 
- * @author Bizid Imen
+ * @author MMC
  *
  */
 public class AdvancedTweet {
