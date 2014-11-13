@@ -93,8 +93,8 @@ public class DataTwitter {
             		MyTweet t = new MyTweet(s);
             		t.setUser(u);
             		myTweets.add(t);
-            		
-            		// for passing a limit of getting just 100 tweet every execute 
+				
+            		// for passing a limit of getting just 100 tweet every execute
             		if(s.getId() < lastID){
             			lastID = t.getId();
             			query.setMaxId(lastID);
@@ -102,22 +102,17 @@ public class DataTwitter {
             		
             		i++;
         	    }
-	    	    	
-            		
-            		
-	    	    	
-	    	   
 	    	    
-	    	    return myTweets;
-				
 			}
+    	    
+    	    return myTweets;
+    	    
 		}catch(TwitterException e){
 			if(e.getErrorCode() == 88){
 				System.out.println("Limit Twitter exceeded");
 			}else{
 				System.out.println("Identifiant entered are incorrect");
-			}
-			//e.printStackTrace();
+			}			
 			
 		}catch(Exception e){
 			e.printStackTrace();
@@ -173,7 +168,8 @@ public class DataTwitter {
 	    	    	
     	    }   
 	    	   		
-			return myTweets;		
+			return myTweets;
+			
 		}catch(TwitterException e){
 			if(e.getErrorCode() == 88){
 				System.out.println("Limit Twitter exceeded");

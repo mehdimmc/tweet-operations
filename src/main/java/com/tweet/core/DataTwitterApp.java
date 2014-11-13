@@ -26,10 +26,11 @@ public class DataTwitterApp {
 		Set<ConfigurationBuilder> listConf = DataTwitter.getListConfig();
 		Iterator<ConfigurationBuilder> it = listConf.iterator();
 		List<MyTweet> myTweets = new ArrayList<MyTweet>();
-		int j = 0;
+		
+		int j = 1;
 		
 		if(it.hasNext()){
-			myTweets = DataTwitter.getTweetByHashtag("tunisie",100,it.next());
+			myTweets = DataTwitter.getTweetByHashtag("tunisie",300,it.next());
 			
 			for(MyTweet mt : myTweets){
 				System.out.println(j+"- "+mt);
@@ -38,8 +39,8 @@ public class DataTwitterApp {
 		}
 		
 		if(it.hasNext()){
-			myTweets = DataTwitter.getTweetFromUser("mmc_tunisia",20,it.next());
-			j = 0;
+			myTweets = DataTwitter.getTweetFromUser("mmc_tunisia",100,it.next());
+			j = 1;
 			for(MyTweet mt : myTweets){
 				System.out.println(j+"- "+mt);
 				j++;
