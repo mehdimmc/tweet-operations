@@ -38,7 +38,7 @@ public class DataTwitterApp {
 		}
 		
 		if(it.hasNext()){
-			myTweets = DataTwitter.getTweetByHashtag("mmc_tunisia",20,it.next());
+			myTweets = DataTwitter.getTweetFromUser("mmc_tunisia",20,it.next());
 			j = 0;
 			for(MyTweet mt : myTweets){
 				System.out.println(j+"- "+mt);
