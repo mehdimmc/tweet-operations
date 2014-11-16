@@ -20,6 +20,8 @@ import com.tweet.core.domain.MyTweet;
 import com.tweet.core.domain.UserTwitter;
 
 /**
+ * Getting tweet by Search API Twitter4J
+ * 
  * @author mmc
  *
  */
@@ -44,7 +46,16 @@ public class DataTwitter {
 		
 		// if you want to add another user configurated,
 		// you can add them here,
-		// you have just to copy and past the same code
+		/*
+		 *	
+		 *   consumerKey = "";
+		 *   consumerSecret = "";
+		 * 	 accessToken = "";
+		 * 	 accessSecret = "";
+		 * 
+		 * 	 listConf.add(getConf(consumerKey, consumerSecret, accessToken, accessSecret)); 
+		 */
+		
 		return listConf;
 	}
 
@@ -59,6 +70,14 @@ public class DataTwitter {
 		return cb;
 	}
 	
+	/**
+	 * Return a list of tweet for hasthag passed in parameter 
+	 * Size of this list is passed too in parameter 
+	 * @param hashtag
+	 * @param maxTweet
+	 * @param cfg
+	 * @return
+	 */
 	public static List<MyTweet> getTweetByHashtag(String hashtag,Integer maxTweet,ConfigurationBuilder cfg){
 		try{
 			
@@ -121,6 +140,14 @@ public class DataTwitter {
 		return new ArrayList<MyTweet>();
 	}
 	
+	/**
+	 * Return a list of tweet from user passed in parameter 
+	 * Size of this list is passed too in parameter 
+	 * @param username
+	 * @param maxTweet
+	 * @param cfg
+	 * @return
+	 */
 	public static List<MyTweet> getTweetFromUser(String username,Integer maxTweet,ConfigurationBuilder cfg){
 		try{
 			
