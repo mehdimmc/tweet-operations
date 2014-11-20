@@ -1,4 +1,4 @@
-Twitter operations
+Tweet operations ( Twitter)
 ================
 
 Sample to get over then 100 tweet through the api #twitter4j
