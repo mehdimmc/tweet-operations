@@ -30,7 +30,7 @@ public class DataTwitterApp {
 		int j = 1;
 		
 		if(it.hasNext()){
-			myTweets = DataTwitter.getTweetByHashtag("tunisie",300,it.next());
+			myTweets = DataTwitter.getTweetByHashtag("tunisie",100,it.next());
 			
 			for(MyTweet mt : myTweets){
 				System.out.println(j+"- "+mt);
